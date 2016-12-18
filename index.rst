@@ -10,6 +10,7 @@ Contents:
 
    intro
    learning_to_code
+   coding
 
 
 Indices and tables
