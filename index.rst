@@ -9,6 +9,7 @@ Contents:
    :maxdepth: 2
 
    intro
+   learning_to_code
 
 
 Indices and tables
