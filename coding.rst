@@ -7,4 +7,5 @@ Once you have learned the basics of coding (such as by reading :doc:`learning_to
 .. toctree::
    :maxdepth: 2
 
+   coding/when_to_code
    coding/documenting_code
