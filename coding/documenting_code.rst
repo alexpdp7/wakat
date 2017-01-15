@@ -15,7 +15,7 @@ However, any experience dealing with coding shows that this is rarely true.
 
 So which documentation should we provide? We can classify it as:
  
-* Implementation documentation. It explains how the code works; which algorithms does it use, what it actually does, etc.
+* Implementation documentation. It explains how the code works; which algorithms does it use, why it is implemented that way, etc.
 * Interface documentation. It explains how to use some unit; which parameters has a function and what does it return, what a module/class purpose is and how to use it, etc.
 * Architecture documentation. It explains how the code is structured, which parts it has and how they assemble to become a complete program.
 * Hacking documentation. It explains how to build and test the code.
@@ -32,11 +32,9 @@ Generally, this is provided inline with the code. Let's start with an incorrect 
     // increase a by one
     a = a + 1
 
-Implementation documentation explains what the code actually does. I say that the above example is incorrect because it is *redundant*. Redundancy is bad, because it does not add any value and can "drift". If for some reason, a needs to be increased by two instead of one, surely the programmer will change that, because otherwise the program won't work. However, he can forget to update the documentation, because that has no immediate consequence. Implementation documentation which contradicts the code is painful, as it brings doubt to the reader.
+What does this comment achieve? Nothing. If anything, it increases our cognitive load and clutters the screen. More insidiously, it introduces the possibility that someone modifies the code but forgets to update the comment, adding confusion to whomever reads the code.
 
-Furthermore, documentation makes the code wordier; you can keep less code on screen, you need more effort to read everything, etc.
-
-So when you should provide implementation documentation?
+So when you should provide implementation documentation? When there is something worth adding.
 
 Complex code
 ~~~~~~~~~~~~
@@ -83,13 +81,17 @@ We should always prefer the clearest piece of code which solves the problem. Onl
 .. doctest::
 
     >>> def pivot(l):
-    ...     # Our pivot is initially the first element of the list
+    ...     # We choose the first element in the list as the pivot
+    ...
+    ...     # We use p to track where the pivot will end up; that is
+    ...     # initially its original place
     ...     p = 0
-    ...     # For each element in the rest of the list, if it should be
-    ...     # before the pivot, we swap it with the pivot and move the pivot
-    ...    # right
     ...     for i in range(1, len(l)):
+    ...         # if the element should go before the pivot...
     ...         if l[i] <= l[0]:
+    ...             # we put it before the place where the pivot
+    ...             # will be and move the final pivot position to 
+    ...             # the right
     ...             p = p + 1
     ...             l[i], l[p] = l[p], l[i]
     ...     # Finally, we put the pivot in its final place
@@ -100,6 +102,18 @@ We should always prefer the clearest piece of code which solves the problem. Onl
     >>> l
     [1, 2, 3, 5, 8]
 
+; note that what the code does is explain the purpose of the variables which is not initially obvious. We should prefer using descriptive variable names, but in this case `final_pivot_position` would make the code unwieldy.
+
+Another technique is to split functions in smaller functions with descriptive names, but in this case it isn't much good either.
+
+Motivation
+~~~~~~~~~~
+
+Another kind of valuable implementation documentation explains the "why". Following the example above, it would also be worth adding a comment explaining why the in-place implementation was needed when the naïve implementation is so much simpler.
+
+Basically, every time you have an inner monologue like "oh, I will do `xxx` *because* `yyy`", you should capture that in a comment.
+
+>>>>>>> Add Implementation documentation
 .. rubric:: Footnotes
 .. [#incompletepivot] This function (and the more efficient implementation following it) is not suitable for implementing quicksort; it only operates on the entire list (and it would need to operate on sections of the list) and does not return the position of the pivot- both concerns have been omitted for brevity and clarity.
 .. [#sourceinplacepivot] This has been adapted from http://stackoverflow.com/a/27461889
