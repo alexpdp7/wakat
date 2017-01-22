@@ -113,7 +113,6 @@ Another kind of valuable implementation documentation explains the "why". Follow
 
 Basically, every time you have an inner monologue like "oh, I will do `xxx` *because* `yyy`", you should capture that in a comment.
 
->>>>>>> Add Implementation documentation
 .. rubric:: Footnotes
 .. [#incompletepivot] This function (and the more efficient implementation following it) is not suitable for implementing quicksort; it only operates on the entire list (and it would need to operate on sections of the list) and does not return the position of the pivot- both concerns have been omitted for brevity and clarity.
 .. [#sourceinplacepivot] This has been adapted from http://stackoverflow.com/a/27461889
