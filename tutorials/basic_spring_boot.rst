@@ -197,5 +197,41 @@ Then modify your `index.html` template to look like this::
 * Add an *u* nordered *l* ist tag
 * Generate *l* ist *i* tem tags by iterating over the `cats` model attribute, assigning each `cats` element to the `cat` variable. Replace each `li`'s text with `cat`'s `name` attribute.
 
+Adding cats
+-----------
+
+Now let's create a form to add new cats. Modify your `index.html` template like this::
+
+    <html xmlns:th="http://www.thymeleaf.org">
+            <body>
+                    Hello, world
+
+                    <ul>
+                            <li th:each="cat : ${cats}" th:text="${cat.name}">Cat name</li>
+                    </ul>
+
+                    <form method="POST" action="/add">
+                            <label>New cat name <input type="text" name="name"/></label>
+                            <input type="submit"/>
+                    </form>		
+            </body>
+    </html>
+
+, adding a `form` which `POST`s a cat name to the  `/add` URI. To handle it, add a new request mapping method to your `Application` class::
+
+	@RequestMapping("/add")
+	String add(String name) {
+		jdbcTemplate.update("insert into cats(name) values (?)", name);
+		return "redirect:/";
+	}
+
+, which simply inserts the data posted and redirects to `/` again.
+
+Additional exercises
+--------------------
+
+* Add a functionality to edit an existing cat's name
+* Add a functionality to delete cats
+* Add new attributes to cats, such as birth date, weight, etc.
 
 .. [#groupdomain] This is used to avoid collisions. If everyone uses a domain they own, no two projects will ever have the same group name and thus the Group can be used as a namespacing identifier. It is also used to create a package name for the project, which has the same "non-collision" requirements.
