@@ -1,4 +1,4 @@
-A basic Spring Boot application
+ A basic Spring Boot application
 ===============================
 
 This tutorial will show you how to build a basic web application backed by an H2 database, using Spring Boot.
@@ -21,7 +21,7 @@ Fill in the following information:
 
 * Group: this is the Maven identifier for the "party" which owns the code. Technically, this should be an Internet domain name reversed (e.g.: `com.example` for the `example.com` domain). If you do not own a suitable domain name, write something you fancy in dotted notation such as `foo.bar` [#groupdomain]_.
 * Artifact: this is the Maven identifier for the project. Artifact names should be unique within a Group, for very much the same reasons.
-* Dependencies: add `Web`, `JDBC`, `Thymeleaf`, `H2`.
+* Dependencies: add `Web`, `JDBC`, `Thymeleaf`, `H2`. Cuttingtand pasting won't work; you need to introduce them one by one and ensure that they appear below in the section "Selected Dependencies".
 
 Then click on "Generate Project". This will prompt you to download a zip file which will contain your skeleton project.
 
