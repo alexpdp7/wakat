@@ -194,8 +194,8 @@ Then modify your `index.html` template to look like this::
     </html>
 
 * First set up the `th` Thymeleaf namespace; this is required for Thymeleaf to work correctly
-* Add an *u* nordered *l* ist tag
-* Generate *l* ist *i* tem tags by iterating over the `cats` model attribute, assigning each `cats` element to the `cat` variable. Replace each `li`'s text with `cat`'s `name` attribute.
+* Add an unordered list (`ul`) tag
+* Generate list item (`li`) tags by iterating over the `cats` model attribute, assigning each `cats` element to the `cat` variable. Replace each `li`'s text with `cat`'s `name` attribute.
 
 Re-run the application to view the cat names list.
 
