@@ -122,7 +122,7 @@ Creating a simple database schema
 
 Let's make this application have a database.
 
-Create a `schema.sql` file within the `src/main/resources` folder::
+Create a `schema.sql` file within the `src/main/resources` folder (by default, Eclipse will ask your operating system to open the file; it is simpler to open it with Eclipse's Text Editor)::
 
     CREATE TABLE cats (
             id                       serial PRIMARY KEY,
