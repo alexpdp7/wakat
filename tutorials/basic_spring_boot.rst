@@ -1,4 +1,4 @@
- A basic Spring Boot application
+A basic Spring Boot application
 ===============================
 
 This tutorial will show you how to build a basic web application backed by an H2 database, using Spring Boot.
