@@ -27,7 +27,7 @@ Then click on "Generate Project". This will prompt you to download a zip file wh
 
 You then should unzip this project somewhere in your system and import it to Eclipse. In general, Eclipse creates new projects within the user's `workspace` directory, which in Windows is located in `C:\\Users\\<username>\\workspace`. If you wish, unzip it there; you should now have a file with full path `C:\\Users\\<username>\\workspace\\<artifact name>\\pom.xml` among other files.
 
-Now, to add this project to Eclipse, you will need to select the "File", "Import..." menu option, choose "Existing Maven Projects" from the "Maven" section and select the folder where the `pom.xml` file resides as the "Root Directory".
+Now, to add this project to Eclipse, you will need to select the "File", "Import..." menu option, choose "Existing Maven Projects" from the "Maven" section and select the folder where the `pom.xml` file resides as the "Root Directory". A checkbox next to `pom.xml` should appear- ensure it is checked. Click on "Finish", and your project should appear in the "Package Explorer".
 
 This will take a while, as Eclipse sets up the project and downloads all dependencies. When Eclipse stops doing things, you should locate a `<Artifact>Application.java` file within `src/main/java`, right-click on it, choose "Run As", "Java Application" and it will be started. The Console view in Eclipse should show a bunch of text and one of the last lines should be::
 
