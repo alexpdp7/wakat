@@ -110,7 +110,7 @@ Let's create the `index` template in `src/main/resources/templates` as `index.ht
             </body>
     </html>
 
-. If you re-run your application now and reload your browser, the HTML above should be shown back to you.
+. If you re-run your application now and reload your browser, the HTML above should be shown back to you. Note that you need to stop the previous launched application to execute it again.
 
 Additional exercises
 ~~~~~~~~~~~~~~~~~~~~
