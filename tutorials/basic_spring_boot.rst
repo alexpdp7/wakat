@@ -17,7 +17,7 @@ Building the basic project
 
 Spring Boot provides the http://start.spring.io/ website, which builds an empty project for you, simplifying greatly the setup process.
 
- Fill in the following information:
+Fill in the following information:
 
 * Group: this is the Maven identifier for the "party" which owns the code. Technically, this should be an Internet domain name reversed (e.g.: `com.example` for the `example.com` domain). If you do not own a suitable domain name, write something you fancy in dotted notation such as `foo.bar` [#groupdomain]_.
 * Artifact: this is the Maven identifier for the project. Artifact names should be unique within a Group, for very much the same reasons.
