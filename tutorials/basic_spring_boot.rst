@@ -102,7 +102,7 @@ edit it so::
 
 What it does is indicate Spring that this class is a Controller, meaning a class which specifies how certain requests should be handled. The method `home` is mapped to the `/` URI and what it does is that when `/` is served by the application, the template named `index` should be rendered.
 
-Let's create the `index` template in `src/main/resources/templates` as `index.html`::
+Let's create the `index` template in `src/main/resources/templates` as `index.html` (to do this with Eclipse, select the folder you want to create the file on, right-click, "New", "Other", "File" (within the General section). By default, Eclipse will open the file with a web browser, which won't allow you to edit the file; right-click on the file on Package Explorer to open it with "Text Editor")::
 
     <html>
             <body>
