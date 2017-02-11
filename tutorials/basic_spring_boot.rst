@@ -197,6 +197,8 @@ Then modify your `index.html` template to look like this::
 * Add an *u* nordered *l* ist tag
 * Generate *l* ist *i* tem tags by iterating over the `cats` model attribute, assigning each `cats` element to the `cat` variable. Replace each `li`'s text with `cat`'s `name` attribute.
 
+Re-run the application to view the cat names list.
+
 Adding cats
 -----------
 
