@@ -106,7 +106,7 @@ Let's create the `index` template in `src/main/resources/templates` as `index.ht
 
     <html>
             <body>
-                    Hello, world
+                    <p>Hello, world</p>
             </body>
     </html>
 
@@ -185,7 +185,7 @@ Then modify your `index.html` template to look like this::
 
     <html xmlns:th="http://www.thymeleaf.org">
             <body>
-                    Hello, world
+                    <p>Hello, world</p>
 
                     <ul>
                             <li th:each="cat : ${cats}" th:text="${cat.name}">Cat name</li>
@@ -206,7 +206,7 @@ Now let's create a form to add new cats. Modify your `index.html` template like 
 
     <html xmlns:th="http://www.thymeleaf.org">
             <body>
-                    Hello, world
+                    <p>Hello, world</p>
 
                     <ul>
                             <li th:each="cat : ${cats}" th:text="${cat.name}">Cat name</li>
