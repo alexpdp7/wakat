@@ -37,7 +37,7 @@ This will take a while, as Eclipse sets up the project and downloads all depende
 
 Let's have a quick overview of the project as viewed in Eclipse's package explorer:
 
-* `<Artifact>`: your project will be named like the Artifact name you chose in the Spring Initializr website
+* `<Artifact>`: The package explorer will have a new top-level element, your project, which will be named like the Artifact name you chose in the Spring Initializr website
 
   * `src/main/java`: this is the folder where your application's main code resides
 
