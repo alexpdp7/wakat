@@ -236,4 +236,10 @@ Additional exercises
 * Add a functionality to delete cats
 * Add new attributes to cats, such as birth date, weight, etc.
 
+Further reading
+---------------
+
+* `The HTML specification <https://html.spec.whatwg.org/>`_
+* `Spring MVC <https://docs.spring.io/spring/docs/current/spring-framework-reference/html/mvc.html>`_
+
 .. [#groupdomain] This is used to avoid collisions. If everyone uses a domain they own, no two projects will ever have the same group name and thus the Group can be used as a namespacing identifier. It is also used to create a package name for the project, which has the same "non-collision" requirements.
